@@ -1,16 +1,30 @@
-var GroceryList = (prop) => (
+var GroceryList = (props) => (
   <ul>
   {
-    prop.groceryItems.map( (item) => (
+    props.groceryItems.map( (item) => (
       <GroceryListItem item={item}/>
     ))
   }
   </ul>
 );
 
-var GroceryListItem = (prop) => (
-  <li>{prop.item}</li>
-);
+// var GroceryListItem = (prop) => (
+//   <li>{prop.item}</li>
+// );
+
+class GroceryListItem extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <li>{this.props.item}</li>
+    );
+  };
+
+}
 
 // var Bread = () => (
 //   <li>Bread</li>
