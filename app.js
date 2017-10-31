@@ -8,10 +8,6 @@ var GroceryList = (props) => (
   </ul>
 );
 
-// var GroceryListItem = (prop) => (
-//   <li>{prop.item}</li>
-// );
-
 class GroceryListItem extends React.Component {
 
   constructor(props) {
@@ -20,7 +16,6 @@ class GroceryListItem extends React.Component {
       bold: false
     };
   }
-
 
   onListItemHover() {
     this.setState({
@@ -40,13 +35,5 @@ class GroceryListItem extends React.Component {
   };
 
 }
-
-// var Bread = () => (
-//   <li>Bread</li>
-// );
-
-// var Cheese = () => (
-//   <li>Cheese</li>
-// );
 
 ReactDOM.render(<GroceryList groceryItems={['Bread', 'Cheese']}/>, document.getElementById("app"));
